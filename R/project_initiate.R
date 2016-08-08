@@ -7,6 +7,9 @@
 #' @export
 
 project_initiate <- function(targetdir = "."){
+  if(!dir.exists(targetdir)){
+    stop("The target directory does not exist.")
+  }
   files_to_copy <- list.files(
     system.file("project_initiate", package = "coretools"),
     recursive = T
@@ -16,6 +19,12 @@ project_initiate <- function(targetdir = "."){
     system.file("project_initiate", package = "coretools"), "/",
     files_to_copy
   )
+  target_path <- paste0(targetdir, "/", files_to_copy)
 
-  file.copy(origin_path, targetdir, overwrite = T)
+  folders <- c("manipulation", "data", "report", "report/demo")
+  folder_path <- paste0(targetdir, "/", folders)
+  sapply(folder_path, dir.create, showWarnings = FALSE)
+
+  operation_success <- file.copy(origin_path, target_path,
+                                 overwrite = TRUE)
 }
