@@ -1,0 +1,16 @@
+Package: coretools
+Title: Bootstrap Some Common Tasks to Initial R Projects
+Version: 0.0.0.9000
+Authors@R: person("Hao", "Zhu", email = "haozhu@hsl.harvard.edu", role = c("aut", "cre"))
+Description: A pack of help functions to initial new R analytical project or a
+    shiny app.
+Depends:
+    R (>= 3.2.2)
+Imports:
+    utils
+License: MIT + file LICENSE
+URL: https://github.com/IFARbiostats/coretools
+BugReports: https://github.com/IFARbiostats/coretools/issues
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1
