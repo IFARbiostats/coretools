@@ -14,14 +14,14 @@ install_core <- function(option = c("normal", "minimum", "full"),
 
   option <- match.arg(option)
   normal_package_list <- c("dplyr", "tidyr", "ezsummary", "readr", "ggplot2",
-                           "knirt", "rmarkdown", "shiny", "stringr", "REDCapR",
+                           "knitr", "rmarkdown", "shiny", "stringr", "REDCapR",
                            "lubridate", "broom", "bookdown", "DT", "haven",
                            "readxl", "highcharter", "viridis")
   minimum_package_list <- c("dplyr", "tidyr", "ezsummary", "readr", "ggplot2",
-                            "knirt", "rmarkdown", "shiny", "stringr", "REDCapR",
+                            "knitr", "rmarkdown", "shiny", "stringr", "REDCapR",
                             "viridis")
   full_package_list <- c("dplyr", "tidyr", "ezsummary", "ggplot2", "shiny",
-                    "readr", "lubridate", "broom", "knirt", "rmardown",
+                    "readr", "lubridate", "broom", "knitr", "rmardown",
                     "bookdown", "data.table", "DT", "DiagrammeR", "fastmatch",
                     "formatR", "gridExtra", "haven", "highcharter", "Hmisc",
                     "httr", "htmltools", "jsonlite", "lattice", "leaflet",
