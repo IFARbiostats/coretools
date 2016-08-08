@@ -9,16 +9,17 @@
 #' this option to be \code{TRUE}.
 #'
 #' @export
-install_core_package <- function(option = c("normal", "minimum", "full"),
+install_core <- function(option = c("normal", "minimum", "full"),
                                  bioc = FALSE){
 
   option <- match.arg(option)
   normal_package_list <- c("dplyr", "tidyr", "ezsummary", "readr", "ggplot2",
                            "knirt", "rmarkdown", "shiny", "stringr", "REDCapR",
                            "lubridate", "broom", "bookdown", "DT", "haven",
-                           "readxl", "highcharter")
+                           "readxl", "highcharter", "viridis")
   minimum_package_list <- c("dplyr", "tidyr", "ezsummary", "readr", "ggplot2",
-                            "knirt", "rmarkdown", "shiny", "stringr", "REDCapR")
+                            "knirt", "rmarkdown", "shiny", "stringr", "REDCapR",
+                            "viridis")
   full_package_list <- c("dplyr", "tidyr", "ezsummary", "ggplot2", "shiny",
                     "readr", "lubridate", "broom", "knirt", "rmardown",
                     "bookdown", "data.table", "DT", "DiagrammeR", "fastmatch",
@@ -27,11 +28,14 @@ install_core_package <- function(option = c("normal", "minimum", "full"),
                     "mailR", "miniUI", "nlme", "pander", "pkgcopier", "purrr",
                     "quantmod", "rcrossref", "roxygen2", "REDCapR", "readxl",
                     "rticles", "scatterD3", "shinydashboard", "shinyjs",
-                    "sparklyr", "stringr", "testthat", "xml2")
+                    "sparklyr", "stringr", "testthat", "xml2", "viridis")
   switch(option,
-         normal = install.packages(normal_package_list),
-         minimum = install.packages(minimum_package_list),
-         full = install.packages(full_package_list)
+         normal = install.packages(normal_package_list,
+                                   repos = "https://cran.rstudio.com/"),
+         minimum = install.packages(minimum_package_list,
+                                    repos = "https://cran.rstudio.com/"),
+         full = install.packages(full_package_list,
+                                 repos = "https://cran.rstudio.com/")
          )
 
   if(bioc){
