@@ -7,5 +7,5 @@ The purpose of this app is to make it easier to get new people, including our ne
 ## To install
 ```
 install.packages("devtools")
-devtools::install_github("IFARbiostats/coretools)
+devtools::install_github("IFARbiostats/coretools")
 ```
