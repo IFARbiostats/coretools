@@ -21,7 +21,7 @@ install_core <- function(option = c("normal", "minimum", "full"),
                             "knitr", "rmarkdown", "shiny", "stringr", "REDCapR",
                             "viridis")
   full_package_list <- c("dplyr", "tidyr", "ezsummary", "ggplot2", "shiny",
-                    "readr", "lubridate", "broom", "knitr", "rmardown",
+                    "readr", "lubridate", "broom", "knitr", "rmarkdown",
                     "bookdown", "data.table", "DT", "DiagrammeR", "fastmatch",
                     "formatR", "gridExtra", "haven", "highcharter", "Hmisc",
                     "httr", "htmltools", "jsonlite", "lattice", "leaflet",
