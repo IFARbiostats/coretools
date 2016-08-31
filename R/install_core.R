@@ -28,7 +28,8 @@ install_core <- function(option = c("normal", "minimum", "full"),
                     "mailR", "miniUI", "nlme", "pander", "pkgcopier", "purrr",
                     "quantmod", "rcrossref", "roxygen2", "REDCapR", "readxl",
                     "rticles", "scatterD3", "shinydashboard", "shinyjs",
-                    "sparklyr", "stringr", "testthat", "xml2", "viridis")
+                    "sparklyr", "stringr", "testthat", "xml2", "viridis",
+                    "timevis")
   switch(option,
          normal = install.packages(normal_package_list,
                                    repos = "https://cran.rstudio.com/"),
