@@ -1,7 +1,7 @@
 #' Install core package
 #'
 #' @description Install a pack of R packages that people usually use around the
-#' core. Anyone are welcome to contribute
+#' core.
 #'
 #' @param option Choose among \code{normal}, \code{minimum} and
 #' \code{full} to install different packages under different cases
