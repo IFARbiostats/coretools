@@ -16,7 +16,7 @@ install_core <- function(option = c("normal", "minimum", "full"),
   normal_package_list <- c("dplyr", "tidyr", "ezsummary", "readr", "ggplot2",
                            "knitr", "rmarkdown", "shiny", "stringr", "REDCapR",
                            "lubridate", "broom", "bookdown", "DT", "haven",
-                           "readxl", "highcharter", "viridis")
+                           "readxl", "highcharter", "viridis", "ggthemes")
   minimum_package_list <- c("dplyr", "tidyr", "ezsummary", "readr", "ggplot2",
                             "knitr", "rmarkdown", "shiny", "stringr", "REDCapR",
                             "viridis")
@@ -29,7 +29,7 @@ install_core <- function(option = c("normal", "minimum", "full"),
                     "quantmod", "rcrossref", "roxygen2", "REDCapR", "readxl",
                     "rticles", "scatterD3", "shinydashboard", "shinyjs",
                     "sparklyr", "stringr", "testthat", "xml2", "viridis",
-                    "timevis")
+                    "timevis", "ggthemes", "ggpmisc", "rcrossref")
   switch(option,
          normal = install.packages(normal_package_list,
                                    repos = "https://cran.rstudio.com/"),
