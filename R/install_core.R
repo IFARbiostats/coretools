@@ -13,23 +13,19 @@ install_core <- function(option = c("normal", "minimum", "full"),
                                  bioc = FALSE){
 
   option <- match.arg(option)
-  normal_package_list <- c("dplyr", "tidyr", "ezsummary", "readr", "ggplot2",
-                           "knitr", "rmarkdown", "shiny", "stringr", "REDCapR",
-                           "lubridate", "broom", "bookdown", "DT", "haven",
-                           "readxl", "highcharter", "viridis", "ggthemes")
   minimum_package_list <- c("dplyr", "tidyr", "ezsummary", "readr", "ggplot2",
                             "knitr", "rmarkdown", "shiny", "stringr", "REDCapR",
                             "viridis")
-  full_package_list <- c("dplyr", "tidyr", "ezsummary", "ggplot2", "shiny",
-                    "readr", "lubridate", "broom", "knitr", "rmarkdown",
-                    "bookdown", "data.table", "DT", "DiagrammeR", "fastmatch",
-                    "formatR", "gridExtra", "haven", "highcharter", "Hmisc",
+  normal_package_list <- c(minimum_package_list, "lubridate", "broom", "bookdown", "DT", "haven",
+                           "readxl", "highcharter", "ggthemes")
+  full_package_list <- c(normal_package_list, "data.table", "DiagrammeR", "fastmatch",
+                    "formatR", "gridExtra", "Hmisc",
                     "httr", "htmltools", "jsonlite", "lattice", "leaflet",
                     "mailR", "miniUI", "nlme", "pander", "pkgcopier", "purrr",
-                    "quantmod", "rcrossref", "roxygen2", "REDCapR", "readxl",
+                    "quantmod", "rcrossref", "roxygen2",
                     "rticles", "scatterD3", "shinydashboard", "shinyjs",
-                    "sparklyr", "stringr", "testthat", "xml2", "viridis",
-                    "timevis", "ggthemes", "ggpmisc", "rcrossref")
+                    "sparklyr",  "testthat", "xml2",
+                    "timevis", "ggpmisc", "rcrossref")
   switch(option,
          normal = install.packages(normal_package_list,
                                    repos = "https://cran.rstudio.com/"),
