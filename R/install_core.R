@@ -9,6 +9,8 @@
 #' this option to be \code{TRUE}.
 #'
 #' @export
+#' 20161221 - modify package lists - tgt
+#'
 install_core <- function(option = c("normal", "minimum", "full"),
                                  bioc = FALSE){
 
