@@ -16,7 +16,7 @@ gglm <- function(dt, x, y){
     geom_point() +
     stat_smooth(method = "lm", col = "red") +
     labs(caption = paste0(
-      "Adjusted R = ", signif(sqrt(summary(fit_lm)$adj.r.squared), 2),
+      "Adjusted R^2 = ", signif(summary(fit_lm)$adj.r.squared, 2),
       "\nP value = ", signif(summary(fit_lm)$coef[2,4], 4),
       "\n", lm_equation
     )) +
@@ -24,8 +24,7 @@ gglm <- function(dt, x, y){
   out[[2]] <- data.frame(
     x = x,
     y = y,
-    variable = unique(dt$variable),
-    r = sqrt(summary(fit_lm)$adj.r.squared),
+    r2 = summary(fit_lm)$adj.r.squared,
     p = summary(fit_lm)$coef[2,4]
   )
   return(out)
