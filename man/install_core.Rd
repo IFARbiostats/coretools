@@ -15,6 +15,6 @@ this option to be \code{TRUE}.}
 }
 \description{
 Install a pack of R packages that people usually use around the
-core. Anyone are welcome to contribute
+core.
 }
 

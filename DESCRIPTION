@@ -7,7 +7,8 @@ Description: A pack of help functions to initial new R analytical project or a
 Depends:
     R (>= 3.2.2)
 Imports:
-    utils
+    utils,
+    ggplot2
 License: MIT + file LICENSE
 URL: https://github.com/IFARbiostats/coretools
 BugReports: https://github.com/IFARbiostats/coretools/issues

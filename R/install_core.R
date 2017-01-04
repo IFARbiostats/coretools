@@ -9,10 +9,11 @@
 #' this option to be \code{TRUE}.
 #'
 #' @export
-#' 20161221 - modify package lists - tgt
 #'
 install_core <- function(option = c("normal", "minimum", "full"),
                                  bioc = FALSE){
+  # 20161221 - modify package lists - tgt
+
 
   option <- match.arg(option)
   minimum_package_list <- c("dplyr", "tidyr", "ezsummary", "readr", "ggplot2",
