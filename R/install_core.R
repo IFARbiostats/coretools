@@ -21,14 +21,13 @@ install_core <- function(option = c("normal", "minimum", "full"),
                             "viridis", "sas7bdat", "devtools")
   normal_package_list <- c(minimum_package_list, "lubridate", "broom", "bookdown", "DT", "haven",
                            "readxl", "highcharter", "ggthemes")
-  full_package_list <- c(normal_package_list, "data.table", "DiagrammeR", "fastmatch",
-                    "formatR", "gridExtra", "Hmisc",
+  full_package_list <- c(normal_package_list, "Cairo", "cluster", "data.table", "deming", "DiagrammeR", "fastmatch", "foreign",
+                    "formatR", "geepack", "ggpmisc", "gridExtra", "gtools", "Hmisc",
                     "httr", "htmltools", "jsonlite", "lattice", "leaflet",
-                    "mailR", "miniUI", "nlme", "pander", "pkgcopier", "purrr",
-                    "quantmod", "rcrossref", "roxygen2",
+                    "magrittr", "mailR", "miniUI", "MplusAutomation", "nlme", "pander", "pkgcopier", "purrr",
+                    "quantmod", "rcrossref", "roxygen2", "rpart",
                     "rticles", "scatterD3", "shinydashboard", "shinyjs",
-                    "sparklyr",  "testthat", "xml2",
-                    "timevis", "ggpmisc", "rcrossref", "geepack", "rpart", "deming", "gtools", "magrittr")
+                    "sparklyr", "timevis",  "testthat", "xml2")
   switch(option,
          normal = install.packages(normal_package_list,
                                    repos = "https://cran.rstudio.com/"),
